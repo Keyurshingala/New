@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/bg_search"
+    android:insetLeft="0dp"
+    android:insetTop="@dimen/_2sdp"
+    android:insetRight="0dp"
+    android:insetBottom="@dimen/_2sdp" />

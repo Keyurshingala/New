@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/offWithe"
+    android:orientation="vertical"
+    tools:context=".readContact.ReadContactActivity">
+
+    <LinearLayout
+        android:id="@+id/tb"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:background="@color/purple_500">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/purple_500"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:padding="@dimen/_3sdp"
+                    android:src="@drawable/ic_search1"
+                    app:tint="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll"
+                android:layout_width="0dp"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="bottom"
+                    android:text="Select contact"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvContactNum"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="0 contacts"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/etSearch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:layout_marginBottom="@dimen/_6sdp"
+                android:layout_weight="1"
+                android:fontFamily="@font/quicksand_regular"
+                android:hint="Search"
+                android:imeOptions="actionDone"
+                android:inputType="text|textCapWords"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/ivSearch"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:contentDescription="@string/app_name"
+                android:padding="@dimen/_12sdp"
+                android:src="@drawable/ic_search1"
+                android:visibility="visible"
+                app:tint="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvContact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tb"
+        android:clipToPadding="false"
+        tools:listitem="@layout/rv_contact" />
+
+    <TextView
+        android:id="@+id/tvEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tb"
+        android:background="@color/offWithe"
+        android:fontFamily="@font/quicksand_bold"
+        android:gravity="center"
+        android:text="Contact Not Available"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/_16sdp"
+        android:visibility="gone" />
+
+
+
+</RelativeLayout>
