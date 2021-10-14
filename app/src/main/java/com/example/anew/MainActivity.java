@@ -19,6 +19,7 @@ import java.util.Objects;
 public class MainActivity extends BaseActivity {
 
     ActivityMainBinding binding;
+    ActivityMainBinding binding1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
