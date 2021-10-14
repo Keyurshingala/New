@@ -97,8 +97,8 @@ public class MainActivity extends BaseActivity {
         setSupportActionBar(binding.tb.tb);
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
         binding.tb.tb.setNavigationOnClickListener(v -> {
-            //finish();
-            tosS("Back");
+            finish();
+//            tosS("Back");
         });
     }
 
